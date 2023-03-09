@@ -8,7 +8,7 @@
     /* background-color: gray; */
     color: white;
     background-size: cover;
-    box-shadow: inset 0px 0px 300px 240px rgba(0,0,0,0.80);
+    box-shadow: inset 0px 0px 300px 240px rgba(0, 0, 0, 0.80);
     background-repeat: no-repeat;
     background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/5523db5a-e2b2-497f-a88b-61f175c3dbad/eb90437e-a876-47c3-a138-ca27772a4d2a/IN-en-20230306-popsignuptwoweeks-perspective_alpha_website_small.jpg");
 }
@@ -18,6 +18,7 @@
     width: 100%;
     /* border: blue solid 1px; */
     display: flex;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -65,7 +66,7 @@
 .sign-up>button {
     height: 20px;
     background-color: #E50914;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     color: white;
     height: 30px;
     border: none;
@@ -82,6 +83,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .text {
@@ -98,6 +100,7 @@
     border: none;
     outline: none;
     font-size: 20px;
+    padding-left: 20px;
 }
 
 .text>button {
@@ -123,4 +126,62 @@
 
 .text1>h1 {
     font-size: 45px;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .Header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-up>.drop_down {
+        display: none;
+    }
+
+    .sign-up {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    .sign-up>button {
+        width: 80%;
+    }
+
+    .Center_Box {
+        padding-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .text1 {
+        /* display: none; */
+        padding-bottom: 10px;
+    }
+    .text2{
+        margin-top: 20px;
+    }
+    .text3{
+        margin-top: 20px;
+    }
+    .text {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        /* margin: 30px; */
+    }
+
+    .text>input {
+        width: 60%;
+    }
+
+    .text>button {
+        width: 30%;
+    }
 }

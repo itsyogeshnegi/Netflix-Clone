@@ -31,7 +31,7 @@ const Slider = () => {
                     <p>Ready to watch? Enter your email to create or restart your membership.</p>
                 </div>
                 <div className='text'>
-                    <input type={"email"} placeholder="Email Address" /><button>Get Started ></button>
+                    <input type={"email"} placeholder="Email Address" /><button>Get Started</button>
                 </div>
             </div>
         </div>

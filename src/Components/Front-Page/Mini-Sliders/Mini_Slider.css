@@ -1,0 +1,40 @@
+.mini_slider {
+    padding-top: 5px;
+    height: 60vh;
+    width: 100%;
+    /* border: 2px red solid; */
+    display: flex;
+}
+
+.mini_slider.reverse {
+    flex-direction: row-reverse;
+}
+
+.tv_text {
+    height: 100%;
+    width: 60%;
+    /* border: 2px royalblue solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    
+}
+
+.tv_text>h1 {
+    font-size: 50px;
+}
+
+.tv_images {
+    height: 100%;
+    width: 40%;
+    /* border: 2px royalblue solid; */
+    background-color: black;
+}
+
+.tv_images>img {
+    height: 100%;
+    width: 100%;
+}
