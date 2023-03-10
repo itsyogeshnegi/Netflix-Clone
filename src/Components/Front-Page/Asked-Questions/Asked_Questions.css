@@ -1,0 +1,41 @@
+.Main_Asked_Questions {
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    /* border: red solid 2px; */
+}
+
+.Main_Asked_top {
+    height: 100px;
+    width: 100%;
+    /* border: 2px blue solid; */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Main_Asked_top>h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+}
+
+.center_Asked {
+    height: auto;
+    width: 100%;
+    /* border: 2px green solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: black;
+
+}
+
+.bottom_Asked {
+    height: 90px;
+    width: 100%;
+    border: 2px black solid;
+}
