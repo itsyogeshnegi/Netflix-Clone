@@ -32,7 +32,13 @@ const Asked_Questions = () => {
                     Answers={"The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space."}
                 />
             </div>
-            <div className='bottom_Asked'></div>
+            <div className='bottom_Asked'>
+                {/* <div className='bottom_inside'> */}
+                <div className='text'>
+                    <input type={"email"} placeholder="Email Address" required /><button>Get Started</button>
+                </div>
+                {/* </div> */}
+            </div>
         </div>
     )
 }
