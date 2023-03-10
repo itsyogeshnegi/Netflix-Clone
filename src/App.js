@@ -1,16 +1,18 @@
 import './App.css';
 import React from 'react';
-import Slider from './Components/Front-Page/Slider-Page/Slider';
-import Main_Mini_component from './Components/Front-Page/Mini-Sliders/Main_Mini_component';
-import Asked_Questions from './Components/Front-Page/Asked-Questions/Asked_Questions';
-import Footer from './Components/Front-Page/Footer/Footer';
+import { Link, Route, Routes, BrowserRouter } from "react-router-dom"
+import Introduction from './Pages/Introduction/Introduction';
+import Login from './Pages/Login/Login';
 function App() {
   return (
     <div className="App">
-      <Slider />
-      <Main_Mini_component />
-      <Asked_Questions />
-      <Footer />
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Introduction />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Questions.css'
 const Questions_box = ({ Questions, Answers }) => {
 
-    const [view, setView] = useState(false);
+    const [view, setView] = useState(true);
     const [icon, setIcon] = useState(false);
     const [plusIcon, setPlusIcon] = useState(false)
     const yourAns = () => {
