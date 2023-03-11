@@ -1,11 +1,11 @@
 import React from 'react'
-import './Login.css'
-
-const Login = () => {
+import './Signup.css'
+const Signup = () => {
     return (
-        <div className='Login'>
-            <h1>Log-In</h1>
+        <div className='signup'>
+            <h1>Sign-Up</h1>
             <form>
+                <input type="text" placeholder="Name" />
                 <input type="email" placeholder='Email' />
                 <input type="password" placeholder='Password' />
                 <button type="submit">SUBMIT</button>
@@ -14,4 +14,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Signup

@@ -116,6 +116,12 @@
     font-weight: 600;
 }
 
+input>Link {
+    text-decoration: none;
+    border: 0px;
+    color: white;
+}
+
 .text1 {
     height: 160px;
     display: flex;
@@ -166,12 +172,15 @@
         /* display: none; */
         padding-bottom: 10px;
     }
-    .text2{
+
+    .text2 {
         margin-top: 20px;
     }
-    .text3{
+
+    .text3 {
         margin-top: 20px;
     }
+
     .text {
         width: 100%;
         justify-content: center;

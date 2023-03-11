@@ -1,5 +1,7 @@
 import React from 'react'
 import './Slider.css'
+import Login from '../../Pages/Login/Login'
+import { Link } from 'react-router-dom'
 const Slider = () => {
     return (
         <div className='Slider'>
@@ -17,7 +19,7 @@ const Slider = () => {
                         </select>
                     </div>
 
-                    <button>Sign-up</button>
+                    <button><Link to={"/signup"}>Sign-up</Link></button>
                 </div>
             </div>
             <div className='Center_Box'>
@@ -31,7 +33,7 @@ const Slider = () => {
                     <p>Ready to watch? Enter your email to create or restart your membership.</p>
                 </div>
                 <div className='text'>
-                    <input type={"email"} placeholder="Email Address" required /><button>Get Started</button>
+                    <input type={"email"} placeholder="Email Address" required title='login_page' /><button><Link to={'/login'}>Get Started</Link></button>
                 </div>
             </div>
         </div>
