@@ -19,7 +19,7 @@ const Slider = () => {
                         </select>
                     </div>
 
-                    <button><Link to={"/signup"}>Sign-up</Link></button>
+                    <button><Link to={"/signup"} style={{ textDecoration: "none", color:"white" }}>Sign-up</Link></button>
                 </div>
             </div>
             <div className='Center_Box'>
@@ -33,7 +33,7 @@ const Slider = () => {
                     <p>Ready to watch? Enter your email to create or restart your membership.</p>
                 </div>
                 <div className='text'>
-                    <input type={"email"} placeholder="Email Address" required title='login_page' /><button><Link to={'/login'}>Get Started</Link></button>
+                    <input type={"email"} placeholder="Email Address" required title='login_page' /><button><Link to={'/login'} style={{ textDecoration: "none", color:"white" }}>Get Started</Link></button>
                 </div>
             </div>
         </div>

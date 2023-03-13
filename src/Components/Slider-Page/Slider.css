@@ -74,6 +74,9 @@
     width: 25%;
     outline: none;
 }
+.sign-up>button>link{
+    text-decoration: none;
+}
 
 .Center_Box {
     height: auto;

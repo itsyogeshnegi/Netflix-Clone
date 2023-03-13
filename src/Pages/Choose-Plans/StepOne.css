@@ -1,0 +1,84 @@
+.step_one {
+    height: 100vh;
+    width: 100%;
+    border: 2px red solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.step_logo {
+    height: 100px;
+    width: 100%;
+    border: 2px red solid;
+}
+
+.step_logo>img {
+    height: 100%;
+}
+
+.plans {
+    height: 70%;
+    width: 100%;
+    border: 2px blue solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plans_inside {
+    height: 60px;
+    width: 30%;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+}
+
+.plans_inside>h3 {
+    font-size: 30px;
+}
+
+.plans_inside>i {
+    font-size: 40px;
+    color: red;
+}
+
+.plans_inside1 {
+    height: 80px;
+    height: 80px;
+    width: 30%;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plans_inside2 {
+    height: 80px;
+    height: 80px;
+    width: 30%;
+    border: 2px solid green;
+    display: flex;
+}
+.planIcon{
+    height: 100%;
+    width: 20%;
+    border: 1px blue solid;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+.planCommits{
+    height: 100%;
+    width: 80%;
+    border: 1px blue solid;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 20px;
+}

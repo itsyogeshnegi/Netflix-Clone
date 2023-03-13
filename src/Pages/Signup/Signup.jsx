@@ -1,31 +1,60 @@
 import React, { useState } from 'react'
 import './Signup.css'
+import { getDatabase, ref, set } from "firebase/database"
+import { app } from '../../Firebaseconnection'
 import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
 const Signup = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const db = getDatabase(app);
+    const navigate = useNavigate();
 
-    const sendData = (e) => {
-        e.preventDefault()
+    // const sendData = (e) => {
+    //     e.preventDefault()
+    //     if (name === "") {
+    //         alert("Name is required")
+    //     }
+    //     else if (email === "") {
+    //         alert("Email is required")
+    //     }
+    //     else if (password === "") {
+    //         alert("password is required")
+    //     }
+    //     else {
+    //         localStorage.setItem("name", name);
+    //         localStorage.setItem("email", email);
+    //         localStorage.setItem("password", password);
+    //         toast.success("submit is Done")
+    //     }
+    // }
+
+    const sendData = async (e) => {
+        e.preventDefault();
         if (name === "") {
-            alert("Name is required")
+            toast.error("Name is required")
         }
         else if (email === "") {
-            alert("Email is required")
+            toast.error("Email is required")
         }
         else if (password === "") {
-            alert("password is required")
+            toast.error("password is required")
         }
         else {
-            localStorage.setItem("name", name);
-            localStorage.setItem("email", email);
-            localStorage.setItem("password", password);
-            toast.success("submit is Done")
-        }
+            toast.success(
+                set(ref(db, "users/data"), {
+                    name,
+                    email,
+                    password
+                })
+            )
+            navigate("/");
+        };
     }
+
     return (
         <div className='signup' >
             <h1>Sign-Up</h1>
@@ -58,7 +87,7 @@ const Signup = () => {
             </form>
             <ToastContainer
                 position="top-center"
-                autoClose={5000}
+                autoClose={3000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick
