@@ -26,6 +26,8 @@ const StepOne = () => {
                     <div className='planCommits'><p>No ads and no extra fees. Ever.</p></div>
                 </div>
 
+                <div className='nextButton'><button>Next</button></div>
+
 
             </div>
         </div>

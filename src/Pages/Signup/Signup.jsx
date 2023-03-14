@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Signup.css'
-import { getDatabase, ref, set } from "firebase/database"
+import { getDatabase, ref, set, onValue, DataSnapshot, push } from "firebase/database"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import { app } from '../../Firebaseconnection'
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from 'react-router-dom'
@@ -33,11 +34,15 @@ const Signup = () => {
     // }
 
     const sendData = async (e) => {
+
         e.preventDefault();
-        if (name === "") {
-            toast.error("Name is required")
-        }
-        else if (email === "") {
+        var atposition = email.indexOf("@");
+        var dotposition = email.lastIndexOf(".")
+
+            ; if (name === "") {
+                toast.error("Name is required")
+            }
+        else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length || email === "") {
             toast.error("Email is required")
         }
         else if (password === "") {
@@ -45,7 +50,10 @@ const Signup = () => {
         }
         else {
             toast.success(
-                set(ref(db, "users/data"), {
+
+                // db.push("root/users", { name, email, password })
+
+                push(ref(db, "users/"), {
                     name,
                     email,
                     password
@@ -65,12 +73,14 @@ const Signup = () => {
                     placeholder="Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
                 />
 
                 <input
                     name='email'
                     type="email"
                     placeholder='Email'
+                    required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
@@ -80,6 +90,7 @@ const Signup = () => {
                     type="password"
                     placeholder='Password'
                     value={password}
+                    required
                     onChange={(e) => setPassword(e.target.value)}
                 />
 

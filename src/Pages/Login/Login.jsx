@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Login.css'
 import { toast, ToastContainer } from "react-toastify";
 import { Link, useNavigate } from 'react-router-dom'
+import StepOne from '../Choose-Plans/StepOne';
 import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
 
@@ -21,7 +22,7 @@ const Login = () => {
         e.preventDefault();
         if (email === userName && password === userPassword) {
             toast.success("Login Success");
-            navigate("/");
+            navigate("/stepone");
         } else {
             toast.error("Invalid Email OR password");
         }
