@@ -21,7 +21,7 @@
 .Login>form {
     padding: 50px;
     border-radius: 10px;
-    background-color: rgba(253, 6, 6, 0.8);
+    background-color: rgba(5, 5, 5, 0.9);
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -31,7 +31,7 @@
 
 .Login>form>input {
     height: 35px;
-    width: 300px;
+    width: 250px;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -47,5 +47,6 @@
     font-size: 18px;
     font-weight: 700;
     color: white;
-    color: red;
+    background-color: red;
+    /* color: red; */
 }
