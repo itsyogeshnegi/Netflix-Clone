@@ -1,0 +1,124 @@
+.steptwo {
+    height: auto;
+    width: 100%;
+    /* border: 2px red solid; */
+}
+
+.two_logo {
+    height: 100px;
+    width: 100%;
+    /* border: 2px red solid; */
+}
+
+.two_logo>img {
+    height: 100%;
+}
+
+.two_text {
+    height: 250px;
+    width: 100%;
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15%;
+    flex-wrap: wrap;
+}
+
+.two_text>p {
+    margin: 10px;
+}
+
+.two_text>p>i {
+    color: red;
+}
+
+.two_plans {
+    height: auto;
+    width: 100%;
+    /* border: 2px red solid; */
+    display: flex;
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+
+.plans_started1 {
+    height: 100%;
+    width: 25%;
+    /* border: 1px rgb(38, 0, 255) solid; */
+
+}
+
+.plans_started {
+    height: auto;
+    width: 20%;
+    /* border: 1px blue solid; */
+}
+
+.box1 {
+    height: 200px;
+    width: 100%;
+    /* border: 1px red solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag_box {
+    height: 55%;
+    width: 60%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.box2 {
+    height: 100px;
+    width: 100%;
+    /* border: 1px red solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.box3>i {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    /* font-size: 10px; */
+    font-size: larger;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .tag_box {
+        width: 95%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 10px;
+    }
+
+    .two_text {
+        display: flex;
+        text-align: start;
+    }
+
+
+
+}
