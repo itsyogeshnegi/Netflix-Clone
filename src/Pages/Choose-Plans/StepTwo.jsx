@@ -1,12 +1,13 @@
 import React from 'react'
 import './StepTwo.css'
+import { Link } from "react-router-dom"
 const StepTwo = () => {
     return (
         <div className='steptwo'>
             <div className='two_logo'><img src='/Netflix_logo1.png' /></div>
             <hr />
             <div className='two_text'>
-                <p>STEP 1 OF 3</p>
+                <p>STEP 1 OF 2</p>
                 <h1>Choose the plan that’s right for you</h1>
                 <p><i class="fa-solid fa-check"></i> Watch all you want. Ad-free.</p>
                 <p><i class="fa-solid fa-check"></i>Recommendations just for you.</p>
@@ -91,7 +92,7 @@ const StepTwo = () => {
                     <div className='box2'>Best</div>
                     <hr />
 
-                    <div className='box2'>4K+HDR</div>
+                    <div className='box2'>4K-HD</div>
                     <hr />
 
                     <div className='box3'>
@@ -103,7 +104,12 @@ const StepTwo = () => {
                 </div>
 
             </div>
-            <div className='two_buttons'></div>
+            <div className='two_buttons'>
+                <p>HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our Terms of Use for more details.</p>
+                <br />
+                <p>Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard, and 1 with Basic and Mobile.</p>
+                <button><Link to={"/stepthree"} style={{ textDecoration: "none", color: "white" }}>Next</Link></button>
+            </div>
         </div>
     )
 }

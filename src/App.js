@@ -6,6 +6,7 @@ import Login from './Pages/Login/Login';
 import Signup from './Pages/Signup/Signup';
 import StepOne from './Pages/Choose-Plans/StepOne';
 import StepTwo from './Pages/Choose-Plans/StepTwo';
+import Stepthree from './Pages/Choose-Plans/Stepthree';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/stepone' element={<StepOne />} />
           <Route path='/steptwo' element={<StepTwo />} />
+          <Route path='/stepthree' element={<Stepthree />} />
         </Routes>
       </BrowserRouter>
     </div>

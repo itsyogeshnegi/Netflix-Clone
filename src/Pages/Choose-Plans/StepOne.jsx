@@ -1,5 +1,6 @@
 import React from 'react'
 import './StepOne.css'
+import { Link } from "react-router-dom"
 const StepOne = () => {
     return (
         <div className='step_one'>
@@ -26,7 +27,7 @@ const StepOne = () => {
                     <div className='planCommits'><p>No ads and no extra fees. Ever.</p></div>
                 </div>
 
-                <div className='nextButton'><button>Next</button></div>
+                <div className='nextButton'><button><Link to={"/steptwo"} style={{textDecoration:"none", color:"white"}}>Next</Link></button></div>
 
 
             </div>

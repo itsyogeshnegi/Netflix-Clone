@@ -69,7 +69,7 @@
 .tag_box {
     height: 55%;
     width: 60%;
-    background-color: red;
+    background-color: 	#E50914;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,6 +104,26 @@
     font-size: larger;
 }
 
+.two_buttons {
+    height: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.two_buttons>button{
+    margin-top: 20px;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: 	#E50914;
+    border: none;
+}
+
 @media only screen and (max-width: 700px) {
 
     .tag_box {
@@ -119,6 +139,15 @@
         text-align: start;
     }
 
+    .two_buttons {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 
+    .two_logo {
+        height: 60px;
+        width: 100%;
+        /* border: 2px red solid; */
+    }
 
 }
