@@ -27,7 +27,7 @@ const Signup = () => {
         else if (email === "") {
             toast.warning("Email is required")
         }
-        else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
+        else if (atposition < 3 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
             toast.error(" Wrong Email")
         }
         else if (password === "") {

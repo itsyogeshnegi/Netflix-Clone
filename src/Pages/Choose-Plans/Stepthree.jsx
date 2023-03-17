@@ -1,5 +1,6 @@
 import React from 'react'
 import './Stepthree.css'
+import { Link } from "react-router-dom"
 const Stepthree = () => {
     return (
         <div className='stepthree'>
@@ -26,7 +27,7 @@ const Stepthree = () => {
                 </div>
 
                 <div className='finishButton'>
-                    <button> Next</button>
+                    <button><Link to={"/netflixDashBoard"} style={{ textDecoration: "none", color: "white" }}>Next</Link></button>
                 </div>
             </div>
         </div>
