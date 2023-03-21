@@ -42,7 +42,6 @@ const Signup = () => {
             navigate("/");
         };
     }
-
     return (
         <div className='signup' >
             <form>

@@ -81,6 +81,7 @@
 .Center_Box {
     height: auto;
     width: 50%;
+    padding-top: 100px;
     /* border: 2px green solid; */
     margin-top: 50px;
     display: flex;

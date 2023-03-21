@@ -6,7 +6,7 @@ const NetflixHomePage = () => {
     return (
         <div className='Netflix-Home'>
             <TopBar />
-            {/* <NetflixSlider /> */}
+            <NetflixSlider />
         </div>
     )
 }
