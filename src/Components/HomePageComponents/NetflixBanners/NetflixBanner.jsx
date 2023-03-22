@@ -25,10 +25,42 @@ const NetflixBanner = () => {
                 title={"Popular"}
                 fetchURL={requests.fetchPopular}
             />
-            {/* <NetflixShows
-                title={"Latest"}
-                fetchURL={requests.fetchLatest}
-            /> */}
+            <NetflixShows
+                title={"Best Movies"}
+                fetchURL={requests.fetchBestMovies}
+            />
+            <NetflixShows
+                title={"Kids Movies"}
+                fetchURL={requests.fetchKids}
+            />
+            <NetflixShows
+                title={"Drama"}
+                fetchURL={requests.fetchDrama}
+            />
+            <NetflixShows
+                title={"sci-fi"}
+                fetchURL={requests.fetchscifi}
+            />
+            <NetflixShows
+                title={"Theater"}
+                fetchURL={requests.fetchTheater}
+            />
+            <NetflixShows
+                title={"Highest Rated"}
+                fetchURL={requests.fetchHighest}
+            />
+            <NetflixShows
+                title={"USA Movies"}
+                fetchURL={requests.fetchUSA}
+            />
+            <NetflixShows
+                title={"Comedy"}
+                fetchURL={requests.fetchComedy}
+            />
+            <NetflixShows
+                title={"Anime"}
+                fetchURL={requests.fetchAnime}
+            />
         </div>
     )
 }

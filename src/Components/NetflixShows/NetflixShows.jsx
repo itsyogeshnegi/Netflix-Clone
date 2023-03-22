@@ -14,12 +14,20 @@ const NetflixShows = ({ fetchURL, title }) => {
     useEffect(() => {
         const fetchedFile = async () => {
             var movieData = await axios.get(tmdb + fetchURL)
-            setMovies(movieData.data.results)
-            console.log(movieData.data.results)
+            if (movieData.data.results) {
+
+                setMovies(movieData.data.results)
+            }
+            else {
+                setMovies([])
+            }
+            console.log(movieData)
         }
         fetchedFile()
     }, [])
 
+    if (movies.length === 0) return
+    console.log(baseURL, "hello:::::::")
     return (
         <>
             <div className='title'>{title}</div>

@@ -45,7 +45,7 @@ const NetflixSlider = () => {
                     </div>
 
                     <div className="movie_overview">{info?.overview}</div>
-                    <div className='movie_Rating' style={{"fontWeight":"700"}}>Rating :10/{info?.vote_average}</div>
+                    <div className='movie_Rating' style={{"fontWeight":"700"}}>Rating : {info?.vote_average}/10</div>
                 </div>
             </header >
         </>

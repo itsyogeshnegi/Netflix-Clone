@@ -57,5 +57,14 @@
     }
     .movie_overview{
         margin: 0px;
+        margin-bottom: 5%;
+        font-size: 15px;
+    }
+    .banner_content>h1{
+        font-size: 30px;
+    }
+    .movie_Rating{
+        margin-bottom: 29%;
+        font-size: 20px;
     }
 }
