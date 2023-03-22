@@ -15,6 +15,7 @@ const NetflixSlider = () => {
         const fetchedData = async () => {
             var myData = await axios.get(tmdb + requests.fetchNetflixOriginals);
             setInfo(myData.data.results[Math.floor(Math.random() * 20)])
+            // console.log(myData.data.results[Math.floor(Math.random() * 20)])
         }
         fetchedData()
     }, [])
@@ -24,7 +25,10 @@ const NetflixSlider = () => {
             <header className='banner'
                 style={{
                     backgroundImage: `url(${baseURL}${info?.backdrop_path})`,
-
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center center',
+                    height: '100vh'
                 }
                 }
             >
@@ -36,11 +40,12 @@ const NetflixSlider = () => {
                         {info?.title || info?.name}
                     </h1>
                     <div className="banner__buttons">
-                        <button className="inside_button">Play</button>
+                        <button className="inside_button"><i class="fa-solid fa-play"></i> Play</button>
                         <button className="inside_button">My List</button>
                     </div>
 
                     <div className="movie_overview">{info?.overview}</div>
+                    <div className='movie_Rating' style={{"fontWeight":"700"}}>Rating :10/{info?.vote_average}</div>
                 </div>
             </header >
         </>

@@ -1,0 +1,38 @@
+.main_box {
+    height: auto;
+    width: auto;
+    /* border: 2px blue solid; */
+    margin-top: 15px;
+    /* display: flex; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* display: flex; */
+}
+
+.main_box::-webkit-scrollbar {
+    display: none;
+}
+
+.title {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    /* position: fixed; */
+}
+
+.shortPosters {
+    height: 300px;
+    width: 100%;
+    /* border: 2px blue solid; */
+    display: flex;
+}
+
+@media screen and (max-width: 700px) {
+    .shortPosters {
+        height: 250px;
+        width: 150px;
+    }
+}
