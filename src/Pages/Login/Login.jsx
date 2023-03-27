@@ -53,7 +53,7 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)} />
 
                 <button type="submit" onClick={handleSubmit}>SUBMIT</button>
-                <p>New to Netflix?<Link to="/signup" style={{ color: "white" }}>Sign up now</Link></p>
+                <p>New to Netflix? <Link to="/signup" style={{ color: "white" }}> Sign up now</Link></p>
             </form>
             <ToastContainer
                 position="top-right"

@@ -8,49 +8,52 @@ import StepOne from './Pages/Choose-Plans/StepOne';
 import StepTwo from './Pages/Choose-Plans/StepTwo';
 import Stepthree from './Pages/Choose-Plans/Stepthree';
 import NetflixHomePage from './Pages/Netflix-Main-Page/NetflixHomePage';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 function App() {
   return (
     <div className="App">
+      <SkeletonTheme baseColor='#313131' highlightColor='#525252'>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path='/'
+              element={<Introduction />}
+            />
 
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/'
-            element={<Introduction />}
-          />
+            <Route
+              path='/login'
+              element={<Login />}
+            />
 
-          <Route
-            path='/login'
-            element={<Login />}
-          />
+            <Route
+              path='/signup'
+              element={<Signup />}
+            />
 
-          <Route
-            path='/signup'
-            element={<Signup />}
-          />
+            <Route
+              path='/stepone'
+              element={<StepOne />}
+            />
 
-          <Route
-            path='/stepone'
-            element={<StepOne />}
-          />
+            <Route
+              path='/steptwo'
+              element={<StepTwo />}
+            />
 
-          <Route
-            path='/steptwo'
-            element={<StepTwo />}
-          />
+            <Route
+              path='/stepthree'
+              element={<Stepthree />}
+            />
 
-          <Route
-            path='/stepthree'
-            element={<Stepthree />}
-          />
+            <Route
+              path='/netflixDashBoard'
+              element={<NetflixHomePage />}
+            />
 
-          <Route
-            path='/netflixDashBoard'
-            element={<NetflixHomePage />}
-          />
+          </Routes>
+        </BrowserRouter>
+      </SkeletonTheme>
 
-        </Routes>
-      </BrowserRouter>
     </div>
   );
 }

@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
-import './TopBar.css'
+import './TopBar.css';
 const TopBar = () => {
 
     const [show, handleShow] = useState(false);
- 
+
     window.addEventListener("scroll", () => {
         if (window.scrollY > 95) {
             handleShow(true);
         } else handleShow(false);
     });
-
 
     return (
         <div className={`nav_logo ${show && "nav__bar__shadow"}`}>
@@ -26,8 +25,9 @@ const TopBar = () => {
                 <li>My List</li>
             </div>
             <div className='LogOut'>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <img src='/NetflixAvatar.png' height={"100%"} />
+                <i class="fa-solid fa-magnifying-glass" id="block"></i>
+                <i class="fa-solid fa-bell" id="block"></i>
+                <img src='/NetflixAvatar.png' height={"100%"} title="Profile" />
                 <i class="fa-solid fa-right-from-bracket" title='Log Out'></i>
             </div>
 

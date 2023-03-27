@@ -14,7 +14,7 @@ const Signup = () => {
     // const db = getDatabase(app);
     const auth = getAuth(app);
     const navigate = useNavigate();
-
+    // const googleProvider = GoogleAuthProvider()
     const sendData = async (e) => {
 
         e.preventDefault();

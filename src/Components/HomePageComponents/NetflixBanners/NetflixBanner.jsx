@@ -2,6 +2,8 @@ import React from 'react'
 import './NetflixBanner.css'
 import NetflixShows from '../../NetflixShows/NetflixShows'
 import requests from '../../../ApiRequestData'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 const NetflixBanner = () => {
     return (
         <div className='netflixbanner'>
@@ -61,6 +63,7 @@ const NetflixBanner = () => {
                 title={"Anime"}
                 fetchURL={requests.fetchAnime}
             />
+
         </div>
     )
 }
