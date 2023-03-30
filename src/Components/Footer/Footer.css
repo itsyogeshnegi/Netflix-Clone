@@ -8,6 +8,7 @@
     color: white;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .footer>i{
     font-size: 29px;
