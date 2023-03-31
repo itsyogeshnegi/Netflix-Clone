@@ -8,6 +8,7 @@ import StepOne from './Pages/Choose-Plans/StepOne';
 import StepTwo from './Pages/Choose-Plans/StepTwo';
 import Stepthree from './Pages/Choose-Plans/Stepthree';
 import NetflixHomePage from './Pages/Netflix-Main-Page/NetflixHomePage';
+import Profile from './Pages/Profile Page/Profile';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
               path='/netflixDashBoard'
               element={<NetflixHomePage />}
             />
+
+            <Route
+              path='/profile'
+              element={<Profile />} />
 
           </Routes>
         </BrowserRouter>

@@ -18,7 +18,7 @@ const Stepthree = () => {
                 </div>
 
                 <div className='finshText'>
-                    <p>STEP 2 OF 2</p>
+                    <p>STEP 3 OF 3</p>
                     <h2>Finish setting up your <br /> account</h2>
                 </div>
 

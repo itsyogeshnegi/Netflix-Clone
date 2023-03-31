@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './TopBar.css';
+import { Link } from "react-router-dom"
 const TopBar = () => {
 
     const [show, handleShow] = useState(false);
@@ -27,8 +28,8 @@ const TopBar = () => {
             <div className='LogOut'>
                 <i class="fa-solid fa-magnifying-glass" id="block"></i>
                 <i class="fa-solid fa-bell" id="block"></i>
-                <img src='/NetflixAvatar.png' height={"100%"} title="Profile" />
-                <i class="fa-solid fa-right-from-bracket" title='Log Out'></i>
+               <Link to={"/profile"} style={{"height":"100%"}}><img src='/NetflixAvatar.png' height={"100%"} title="Profile" /></Link> 
+                <Link to={"/"} style={{color:"white", "paddingLeft":"20px"}}><i class="fa-solid fa-right-from-bracket" title='Log Out'></i></Link>
             </div>
 
         </div>

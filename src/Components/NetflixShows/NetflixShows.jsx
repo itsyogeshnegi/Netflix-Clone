@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './NetflixShows.css'
 import axios from 'axios'
+import pako from 'pako';
 import 'react-loading-skeleton/dist/skeleton.css'
 import Skeleton from 'react-loading-skeleton'
+import { Link } from 'react-router-dom';
 import 'react-loading-skeleton/dist/skeleton.css'
 const NetflixShows = ({ fetchURL, title }) => {
 
@@ -25,6 +27,8 @@ const NetflixShows = ({ fetchURL, title }) => {
             }
             console.log(movieData)
         }
+        // const compressedData = pako.gzip(JSON.stringify());
+
         fetchedFile()
     }, [tmdb + fetchURL])
 

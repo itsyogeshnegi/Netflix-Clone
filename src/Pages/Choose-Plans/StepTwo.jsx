@@ -7,7 +7,7 @@ const StepTwo = () => {
             <div className='two_logo'><img src='/Netflix_logo1.png' /></div>
             <hr />
             <div className='two_text'>
-                <p>STEP 1 OF 2</p>
+                <p>STEP 2 OF 3</p>
                 <h1>Choose the plan that’s right for you</h1>
                 <p><i class="fa-solid fa-check"></i> Watch all you want. Ad-free.</p>
                 <p><i class="fa-solid fa-check"></i>Recommendations just for you.</p>
