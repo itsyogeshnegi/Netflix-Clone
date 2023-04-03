@@ -27,7 +27,7 @@ const Stepthree = () => {
                 </div>
 
                 <div className='finishButton'>
-                    <button><Link to={"/netflixDashBoard"} style={{ textDecoration: "none", color: "white" }}>Next</Link></button>
+                    <button><Link to={"/login"} style={{ textDecoration: "none", color: "white" }}>Next</Link></button>
                 </div>
             </div>
         </div>

@@ -36,7 +36,7 @@ const Login = () => {
         }
         else {
             signInWithEmailAndPassword(auth, email, password)
-                .then((value) => navigate("/stepone"))
+                .then((value) => navigate("/netflixDashBoard"))
                 .catch((err) => toast.error("Invaild Id or Password"))
         }
     };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Signup.css'
-import { getDatabase } from "firebase/database"
+import { getDatabase, set, ref, push } from "firebase/database"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import { app } from '../../Firebaseconnection'
 import { toast, ToastContainer } from "react-toastify";
@@ -11,7 +11,9 @@ const Signup = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    // const db = getDatabase(app);
+    const [rePassword, setRePassword] = useState("");
+    const [phone, setPhone] = useState("")
+    const db = getDatabase(app);
     const auth = getAuth(app);
     const navigate = useNavigate();
     // const googleProvider = GoogleAuthProvider()
@@ -30,16 +32,31 @@ const Signup = () => {
         else if (atposition < 3 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
             toast.error(" Wrong Email")
         }
+        else if (phone === "") {
+            toast.error("Phone Number is Required")
+        }
+        else if (phone.length <= 9 || phone.length >= 11) {
+            toast.error("Required Length is 10")
+        }
         else if (password === "") {
             toast.error("password is required")
         }
         else if (password.length < 6) {
-            toast.warning("Your password minimum 6 digit")
+            toast.error("Your password minimum 6 digit")
+        }
+        else if (password !== rePassword) {
+            toast.error("Password are Not Matched")
+        }
+        else if (rePassword === "") {
+            toast.error("Re-Enter Your Password")
         }
         else {
             toast.success("Create Done",
                 createUserWithEmailAndPassword(auth, email, password).then((value) => console.log("create Done")))
-            navigate("/");
+            push(ref(db, "User/"), {
+                name, email, password, phone
+            })
+            navigate("/stepone");
         };
     }
     return (
@@ -66,12 +83,30 @@ const Signup = () => {
                 />
 
                 <input
+                    name='Phone Number'
+                    type="number"
+                    placeholder='Phone Number'
+                    // required
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                />
+
+                <input
                     name='password'
                     type="password"
                     placeholder='Password'
                     value={password}
                     // required
                     onChange={(e) => setPassword(e.target.value)}
+                />
+
+                <input
+                    name='Confirm password'
+                    type="password"
+                    placeholder='Confirm Password'
+                    value={rePassword}
+                    // required
+                    onChange={(e) => setRePassword(e.target.value)}
                 />
 
                 <button type="submit" onClick={sendData}>SUBMIT</button>
