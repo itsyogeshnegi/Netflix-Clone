@@ -110,7 +110,8 @@
     height: auto;
     margin-top: 10px;
 }
-.promotions{
+
+.promotions {
     /* border: 1px red solid; */
     height: 20px;
     width: 100%;
@@ -126,10 +127,27 @@ h4 {
 }
 
 .lowerRight {
-    height: 100%;
+    height: auto;
     width: 60%;
     background-color: whitesmoke;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     /* border: 2px red solid; */
+}
+
+.lowerRight-Box {
+    min-height: 90%;
+    width: 90%;
+    border: 2px black dotted;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 20px 50px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -160,13 +178,19 @@ h4 {
         padding-inline: 10px;
         padding-bottom: 20px;
     } */
-    #none{
+    #none {
         display: none;
     }
+
     .lower>button {
         width: 22%;
         margin: 5px;
         height: 30px;
         font-size: 11px;
+    }
+
+    .upper {
+        padding-right: 10px;
+        font-size: 20px;
     }
 }
