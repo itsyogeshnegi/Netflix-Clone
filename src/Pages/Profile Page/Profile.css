@@ -139,7 +139,7 @@ h4 {
 .lowerRight-Box {
     min-height: 90%;
     width: 90%;
-    border: 2px black dotted;
+    /* border: 2px black dotted; */
     background-color: black;
     color: white;
     border-radius: 30px;
