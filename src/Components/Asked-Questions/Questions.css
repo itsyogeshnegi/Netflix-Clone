@@ -35,6 +35,7 @@
 .Ans.ansopen {
     padding: 20px;
     height: auto;
+    text-align: start;
 }
 
 .ask_Q {
@@ -44,6 +45,7 @@
     justify-content: start;
     padding-left: 10px;
     align-items: center;
+    font-size:25px;
 }
 
 .plus {
