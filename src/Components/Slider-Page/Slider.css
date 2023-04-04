@@ -27,7 +27,7 @@
     /* border: blue solid 1px; */
     display: flex;
     justify-content: start;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .logo>img {
@@ -81,7 +81,7 @@
 .Center_Box {
     height: auto;
     width: 50%;
-    padding-top: 50px;
+    padding-top: 80px;
     /* border: 2px green solid; */
     margin-top: 50px;
     display: flex;
@@ -130,7 +130,7 @@ input>Link {
     height: 160px;
     display: flex;
     justify-content: center;
-    /* align-items: end; */
+    align-items: end;
 }
 
 .text3 {

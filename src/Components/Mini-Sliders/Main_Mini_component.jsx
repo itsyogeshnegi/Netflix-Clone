@@ -8,7 +8,6 @@ const Main_Mini_component = () => {
                 heading={"Enjoy on your TV."}
                 text={"Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more."}
                 photos={<img src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png' />}
-                gif={<video src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v'/>}
             />
             <Mini_Slider
                 reverse
