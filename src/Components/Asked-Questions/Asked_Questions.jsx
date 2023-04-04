@@ -1,6 +1,7 @@
 import React from 'react'
 import './Asked_Questions.css'
 import Questions_box from './Questions_box'
+import { Link } from "react-router-dom"
 const Asked_Questions = () => {
     return (
         <div className='Main_Asked_Questions'>
@@ -35,7 +36,7 @@ const Asked_Questions = () => {
             <div className='bottom_Asked'>
                 {/* <div className='bottom_inside'> */}
                 <div className='text'>
-                    <input type={"email"} placeholder="Email Address" required /><button>Get Started</button>
+                    <input type={"email"} placeholder="Email Address" required /><button><Link to={"/login"} style={{textDecoration:"none" , color:"white"}}>Get Started</Link></button>
                 </div>
                 {/* </div> */}
             </div>
