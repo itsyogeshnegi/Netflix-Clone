@@ -54,7 +54,7 @@ const Signup = () => {
             toast.success("Create Done",
                 createUserWithEmailAndPassword(auth, email, password).then((value) => console.log("create Done")))
             push(ref(db, "User/"), {
-                name, email, password, phone
+                name, email, password
             })
             navigate("/stepone");
         };

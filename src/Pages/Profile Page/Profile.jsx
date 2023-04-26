@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Profile.css'
+import { getDatabase, ref, child, get } from "firebase/database";
 import firebase from 'firebase/app';
 const Profile = () => {
+
+    // const [myName, setMyName] = useState("")
+    // const [email, setemail] = useState("")
+
+    // const dbRef = ref(getDatabase());
+
+    // const myData = () => {
+    //     get(dbRef, `User/${email}`).then((snapshot) => {
+    //         if (snapshot.exists()) {
+    //             console.log(snapshot.val());
+    //         } else {
+    //             console.log("No data available");
+    //         }
+    //     }).catch((error) => {
+    //         console.error(error);
+    //     });
+    // }
+
     return (
         <div className='profilePage'>
             <div className='profilePageUpper'>
@@ -22,6 +41,7 @@ const Profile = () => {
                     </div>
                     <div className='profileName'>
                         <div className='CheckName'>
+                            {/* <button onClick={myData} style={{ width: "40%", "height": "50px" }}>MY DATA</button> */}
                             <h2>Your Name</h2>
                             <h4>Email@gmail.com</h4>
                         </div>
